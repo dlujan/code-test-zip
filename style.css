@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+#searchResults {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#searchResults > div {
+    margin-right: 30px;
+}
+
+#searchResults p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#error {
+    font-size: 10px;
+    color: red;
+    margin-bottom: 4px;
+}
+
+img {
+    width: 200px;
+}
