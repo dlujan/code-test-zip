@@ -1,7 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #83c0ff;
 }
 
 .container {
@@ -9,18 +15,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
 }
 
 h1 {
+    color: #fff;
     font-size: 20px;
 }
 
 #searchResults {
+    color: #FFF;
+    font-size: 20px;
     display: flex;
     margin-bottom: 50px;
 }
@@ -30,16 +34,54 @@ h1 {
 }
 
 #searchResults p {
-    font-size: 18px;
+    color: #fff;
+    font-size: 20px;
     margin-bottom: 10px;
-}
-
-#error {
-    font-size: 10px;
-    color: red;
-    margin-bottom: 4px;
 }
 
 img {
     width: 200px;
+}
+
+#error {
+    font-size: 13px;
+    color: #d81515;
+    margin-bottom: 7px;
+    margin-left: 36px;
+}
+
+.form-container {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    font: 18px Helvetica, Arial, sans-serif;
+    display: block;
+    border: none;
+    padding: 20px;
+    width: 250px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    outline: none;
+}
+
+input#submit {
+    width: 290px;
+    transition: background-color 0.2s ease-in-out;
+    font: 18px Helvetica, Arial, sans-serif;
+    border: none;
+    background: #4860a8;
+    color: #fff;
+    padding: 16px 40px;
+    cursor: pointer;
+}
+
+input#submit:hover {
+    background: #3D518C;
 }

@@ -18,7 +18,7 @@ function fetchZIP(e) {
     if (zip.length === 5) {
 
         errorMessage.innerHTML = ""
-        searchResults.innerHTML = 'Loading...'
+        searchResults.innerHTML = 'Searching...'
         
         fetch(`http://api.zippopotam.us/us/${zip}`)
         .then(response => response.json())
@@ -42,7 +42,7 @@ function fetchZIP(e) {
             document.getElementById('zip').value = ''
         })
         .catch(err => {
-            searchResults.innerHTML = "Oops. That ZIP code doesn't exist. Try another one."
+            searchResults.innerHTML = "Oops. That zip code doesn't exist. Try another one."
             document.getElementById('zip').value = ''
         })
 
