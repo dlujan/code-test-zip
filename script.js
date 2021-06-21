@@ -24,7 +24,7 @@ function fetchZIP(e) {
         .then(response => response.json())
         .then(data => {
 
-            country = data.country
+            country = data["country abbreviation"]
             latitude = data.places[0].latitude
             longitude = data.places[0].longitude
             place = data.places[0]["place name"]
