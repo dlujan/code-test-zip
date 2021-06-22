@@ -27,6 +27,13 @@ h1 {
     font-size: 20px;
     display: flex;
     margin-bottom: 50px;
+    max-height: 300px;
+    transition: all 1s;
+}
+
+#searchResults.pre-animation {
+    opacity:0;
+    max-height: 0;
 }
 
 #searchResults > div {
@@ -56,11 +63,12 @@ img {
     font-size: 13px;
     color: #d81515;
     margin-bottom: 7px;
-    margin-left: 36px;
+    margin-right: 79px;
 }
 
 .form-container {
     width: 100%;
+    text-align: center;
 }
 
 form {

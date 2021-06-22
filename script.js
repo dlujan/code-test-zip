@@ -31,14 +31,18 @@ function fetchZIP(e) {
             state = data.places[0].state
             stateAbbrev = data.places[0]["state abbreviation"]
 
-            searchResults.innerHTML = `
-            <div><p>${place}, ${state}, ${country}</p>
-            <p>Latitude: ${latitude}</p>
-            <p>Longitude: ${longitude}</p>
-            <p>Zip: ${zip}</p></div>
-            <img src='/states/${stateAbbrev}.svg'>
-            `
-
+            searchResults.classList.add('pre-animation')
+            setTimeout(function(){
+                searchResults.innerHTML = `
+                <div><p>${place}, ${state}, ${country}</p>
+                <p>Latitude: ${latitude}</p>
+                <p>Longitude: ${longitude}</p>
+                <p>Zip: ${zip}</p></div>
+                <img src='/states/${stateAbbrev}.svg'>
+                `
+                searchResults.classList.remove('pre-animation')
+            },1000)
+            
             document.getElementById('zip').value = ''
         })
         .catch(err => {
